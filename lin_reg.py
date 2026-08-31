@@ -16,7 +16,7 @@ class LinearRegression:
         return (x-self.mean)/self.std
     
     def fit(self,x,y):
-        self.scale(x)
+        x=self.scale(x)
         n_sample,n_feat=np.shape(x)
         len=len(x)
         self.weight=np.zeros(n_feat)
